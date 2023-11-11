@@ -15,6 +15,7 @@
  *******************************************************************************/
 #include "../xbyak_loongarch64/xbyak_loongarch64.h"
 #include <cstring>
+#include <limits>
 #define TEST_NUM 1
 
 using namespace Xbyak_loongarch64;
