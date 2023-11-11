@@ -1,3 +1,4 @@
+#include <gtest/gtest.h>
 #include <xbyak_loongarch64/xbyak_loongarch64.h>
 using namespace Xbyak_loongarch64;
 class Generator : public CodeGenerator {
@@ -21,7 +22,8 @@ public:
     jirl(zero, ra, 0);
   }
 };
-int main() {
+
+TEST(testStrCpy, simpleStrCpy){
   Generator gen;
   gen.ready();
   auto f = gen.getCode<int (*)(char *, char *)>();
@@ -29,5 +31,9 @@ int main() {
   char str1[1024] = {0};
   gen.dump();
   f(str0, str1);
-  printf("src:(%s)\ndst:(%s)\n", str0, str1);
+  EXPECT_STREQ(str0, str1);
+}
+int main(int argc, char *argv[]) {
+  testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }

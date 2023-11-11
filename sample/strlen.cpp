@@ -42,3 +42,7 @@ int main() {
   gen.dump();
   printf("(%s) length is %d\n", str0, f(str0));
 }
+int main(int argc, char *argv[]) {
+  testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
