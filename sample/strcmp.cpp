@@ -38,13 +38,13 @@ public:
 int main() {
   Generator gen;
   gen.ready();
-  auto f = gen.getCode<int (*)(char*, char*)>();
+  auto f = gen.getCode<int (*)(char *, char *)>();
   char str0[] = "this is a string ";
   char str1[] = "this is a string yyy";
   char str2[] = "asdfghj";
   char str3[] = "asdfghj";
   gen.dump();
-  //printf("a0 addr is %p %p\n", str0, str1);
+  // printf("a0 addr is %p %p\n", str0, str1);
   printf("%s == %s ? %d\n", str0, str1, f(str0, str1));
   printf("%s == %s ? %d\n", str2, str3, f(str2, str3));
 }

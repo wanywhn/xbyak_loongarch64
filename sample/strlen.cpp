@@ -37,7 +37,7 @@ public:
 int main() {
   Generator gen;
   gen.ready();
-  auto f = gen.getCode<int (*)(char*)>();
+  auto f = gen.getCode<int (*)(char *)>();
   char str0[] = "loongarch is the best";
   gen.dump();
   printf("(%s) length is %d\n", str0, f(str0));
