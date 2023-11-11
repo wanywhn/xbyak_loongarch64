@@ -1,4 +1,4 @@
-set(TARGET add add2 bf bf_loongarch cpuinfo)
+set(TARGET add add2 bf bf_loongarch cpuinfo direct_write div)
 foreach (src IN ITEMS ${TARGET})
     add_executable(${src} ${src}.cpp)
     find_package(GTest MODULE REQUIRED)
