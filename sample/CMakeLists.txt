@@ -1,5 +1,5 @@
 set(TARGET add add2 bf bf_loongarch cpuinfo)
-foreach(src IN ITEMS ${TARGET})
+foreach (src IN ITEMS ${TARGET})
     add_executable(${src} ${src}.cpp)
     find_package(GTest MODULE REQUIRED)
     target_link_libraries(${src} PRIVATE xbyak_loongarch64 GTest::GTest GTest::Main)
@@ -8,4 +8,4 @@ foreach(src IN ITEMS ${TARGET})
             CXX_STANDARD_REQUIRED YES
             CXX_EXTENSIONS NO)
     add_test(NAME ${src} COMMAND ${src})
-endforeach()
+endforeach ()
