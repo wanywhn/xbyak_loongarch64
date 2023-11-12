@@ -1437,6 +1437,12 @@ void CodeGenerator::fldx_s(const XReg &fd, const XReg &rj, const XReg &rk) { Loo
 void CodeGenerator::fldx_d(const XReg &fd, const XReg &rj, const XReg &rk) { Loongarch3Reg(0b00111000001101000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
 void CodeGenerator::fstx_s(const XReg &fd, const XReg &rj, const XReg &rk) { Loongarch3Reg(0b00111000001110000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
 void CodeGenerator::fstx_d(const XReg &fd, const XReg &rj, const XReg &rk) { Loongarch3Reg(0b00111000001111000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+
+void CodeGenerator::ll_acq_w(const XReg &rd, const XReg &rj) { Loongarch2Reg(0b11100001010111100000, rj.getIdx(), rd.getIdx()); }
+void CodeGenerator::sc_rel_w(const XReg &rd, const XReg &rj) { Loongarch2Reg(0b11100001010111100001, rj.getIdx(), rd.getIdx()); }
+void CodeGenerator::ll_acq_d(const XReg &rd, const XReg &rj) { Loongarch2Reg(0b11100001010111100010, rj.getIdx(), rd.getIdx()); }
+void CodeGenerator::sc_rel_d(const XReg &rd, const XReg &rj) { Loongarch2Reg(0b11100001010111100011, rj.getIdx(), rd.getIdx()); }
+
 void CodeGenerator::amswap_w(const XReg &rd, const XReg &rk, const XReg &rj) { Loongarch3Reg(0b00111000011000000, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::amswap_d(const XReg &rd, const XReg &rk, const XReg &rj) { Loongarch3Reg(0b00111000011000001, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::amadd_w(const XReg &rd, const XReg &rk, const XReg &rj) { Loongarch3Reg(0b00111000011000010, rk.getIdx(), rj.getIdx(), rd.getIdx()); }

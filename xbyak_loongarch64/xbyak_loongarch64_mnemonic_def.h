@@ -1436,12 +1436,16 @@ void ldx_bu(const XReg &rd, const XReg &rj, const XReg &rk); // 0011100000100000
 void ldx_hu(const XReg &rd, const XReg &rj, const XReg &rk); // 00111000001001000     rk      rj   rd
 void ldx_wu(const XReg &rd, const XReg &rj, const XReg &rk); // 00111000001010000     rk      rj   rd
 
-void preldx(const int32_t hint, const XReg &rj, const XReg &rk); // 00111000001011000     rk      rj   hint
-void fldx_s(const XReg &fd, const XReg &rj, const XReg &rk);     // 00111000001100000     rk      rj   fd
-void fldx_d(const XReg &fd, const XReg &rj, const XReg &rk);     // 00111000001101000     rk      rj   fd
-void fstx_s(const XReg &fd, const XReg &rj, const XReg &rk);     // 00111000001110000     rk      rj   fd
-void fstx_d(const XReg &fd, const XReg &rj, const XReg &rk);     // 00111000001111000     rk      rj   fd
+void preldx(const int32_t hint, const XReg &rj, const XReg &rk);  // 00111000001011000     rk      rj   hint
+void fldx_s(const XReg &fd, const XReg &rj, const XReg &rk);      // 00111000001100000     rk      rj   fd
+void fldx_d(const XReg &fd, const XReg &rj, const XReg &rk);      // 00111000001101000     rk      rj   fd
+void fstx_s(const XReg &fd, const XReg &rj, const XReg &rk);      // 00111000001110000     rk      rj   fd
+void fstx_d(const XReg &fd, const XReg &rj, const XReg &rk);      // 00111000001111000     rk      rj   fd
 
+void ll_acq_w(const XReg &rd, const XReg &rj);                    // 0011100001010111100000        rj   rd
+void sc_rel_w(const XReg &rd, const XReg &rj);                    // 0011100001010111100001        rj   rd
+void ll_acq_d(const XReg &rd, const XReg &rj);                    // 0011100001010111100010        rj   rd
+void sc_rel_d(const XReg &rd, const XReg &rj);                    // 0011100001010111100011        rj   rd
 void amswap_w(const XReg &rd, const XReg &rk, const XReg &rj);    // 00111000011000000     rk      rj   rd
 void amswap_d(const XReg &rd, const XReg &rk, const XReg &rj);    // 00111000011000001     rk      rj   rd
 void amadd_w(const XReg &rd, const XReg &rk, const XReg &rj);     // 00111000011000010     rk      rj   rd
@@ -1479,8 +1483,9 @@ void ammax_db_du(const XReg &rd, const XReg &rk, const XReg &rj); // 00111000011
 void ammin_db_wu(const XReg &rd, const XReg &rk, const XReg &rj); // 00111000011100010     rk      rj   rd
 void ammin_db_du(const XReg &rd, const XReg &rk, const XReg &rj); // 00111000011100011     rk      rj   rd
 
-void dbar(const int32_t hint); // 00111000011100100       hint
-void ibar(const int32_t hint); // 00111000011100101       hint
+
+void dbar(const int32_t hint);                                // 00111000011100100       hint
+void ibar(const int32_t hint);                                // 00111000011100101       hint
 
 void fldgt_s(const XReg &fd, const XReg &rj, const XReg &rk); // 00111000011101000     rk      rj   fd
 void fldgt_d(const XReg &fd, const XReg &rj, const XReg &rk); // 00111000011101001     rk      rj   fd
