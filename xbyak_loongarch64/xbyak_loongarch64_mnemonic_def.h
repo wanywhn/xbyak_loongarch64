@@ -19,6 +19,86 @@ void vadd_h(const VReg &vd, const VReg &vj, const VReg &vk);
 void vadd_w(const VReg &vd, const VReg &vj, const VReg &vk);
 void vadd_d(const VReg &vd, const VReg &vj, const VReg &vk);
 
+void vsub_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsub_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsub_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsub_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsub_q(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vabsd_b(const VReg &fd, const VReg &rj, const VReg &rk);
+void vabsd_h(const VReg &fd, const VReg &rj, const VReg &rk);
+void vabsd_w(const VReg &fd, const VReg &rj, const VReg &rk);
+void vabsd_d(const VReg &fd, const VReg &rj, const VReg &rk);
+void vabsd_bu(const VReg &fd, const VReg &rj, const VReg &rk);
+void vabsd_hu(const VReg &fd, const VReg &rj, const VReg &rk);
+void vabsd_wu(const VReg &fd, const VReg &rj, const VReg &rk);
+void vabsd_du(const VReg &fd, const VReg &rj, const VReg &rk);
+
+void vaddwev_h_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_w_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_d_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_q_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_h_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_w_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_d_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_q_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_h_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_w_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_d_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_q_du(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_h_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_w_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_d_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_q_du(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vaddwev_h_bu_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_w_hu_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_d_wu_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwev_q_du_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_h_bu_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_w_hu_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_d_wu_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vaddwod_q_du_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vsadd_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsadd_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsadd_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsadd_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vsadd_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsadd_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsadd_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsadd_du(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vssub_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vssub_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vssub_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vssub_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vssub_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vssub_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vssub_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vssub_du(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vavg_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavg_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavg_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavg_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vavg_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavg_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavg_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavg_du(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vavgr_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavgr_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavgr_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavgr_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavgr_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavgr_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavgr_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vavgr_du(const VReg &vd, const VReg &vj, const VReg &vk);
+
 void vmax_b(const VReg &vd, const VReg &vj, const VReg &vk);
 void vmax_h(const VReg &vd, const VReg &vj, const VReg &vk);
 void vmax_w(const VReg &vd, const VReg &vj, const VReg &vk);
@@ -49,10 +129,29 @@ void vdiv_h(const VReg &vd, const VReg &vj, const VReg &vk);
 void vdiv_w(const VReg &vd, const VReg &vj, const VReg &vk);
 void vdiv_d(const VReg &vd, const VReg &vj, const VReg &vk);
 
+void vsll_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsll_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsll_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsll_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vrotr_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vrotr_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vrotr_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vrotr_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vrotri_b(const VReg &vd, const VReg &vj, uint32_t ui3);
+void vrotri_h(const VReg &vd, const VReg &vj, uint32_t ui4);
+void vrotri_w(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vrotri_d(const VReg &vd, const VReg &vj, uint32_t ui6);
+
 void vfmax_s(const VReg &vd, const VReg &vj, const VReg &vk);
 void vfmax_d(const VReg &vd, const VReg &vj, const VReg &vk);
 void vfmin_s(const VReg &vd, const VReg &vj, const VReg &vk);
 void vfmin_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vfmaxa_s(const VReg &vd, const VReg &vj, const VReg &vk);
+void vfmaxa_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vfmina_s(const VReg &vd, const VReg &vj, const VReg &vk);
+void vfmina_d(const VReg &vd, const VReg &vj, const VReg &vk);
 
 void vfadd_s(const VReg &vd, const VReg &vj, const VReg &vk);
 void vfadd_d(const VReg &vd, const VReg &vj, const VReg &vk);
@@ -73,6 +172,16 @@ void vreplve_b(const VReg &vd, const VReg &vj, const XReg &rk);
 void vreplve_h(const VReg &vd, const VReg &vj, const XReg &rk);
 void vreplve_w(const VReg &vd, const VReg &vj, const XReg &rk);
 void vreplve_d(const VReg &vd, const VReg &vj, const XReg &rk);
+
+void vpackev_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vpackev_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vpackev_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vpackev_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vpackod_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vpackod_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vpackod_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vpackod_d(const VReg &vd, const VReg &vj, const VReg &vk);
 
 void vpickev_b(const VReg &vd, const VReg &vj, const VReg &vk);
 void vpickev_h(const VReg &vd, const VReg &vj, const VReg &vk);
@@ -108,6 +217,20 @@ void vseq_h(const VReg &vd, const VReg &vj, const VReg &vk);
 void vseq_w(const VReg &vd, const VReg &vj, const VReg &vk);
 void vseq_d(const VReg &vd, const VReg &vj, const VReg &vk);
 
+void vsle_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsle_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsle_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsle_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsle_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsle_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsle_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsle_du(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vslt_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vslt_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vslt_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vslt_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
 void vfsub_s(const VReg &vd, const VReg &vj, const VReg &vk);
 void vfsub_d(const VReg &vd, const VReg &vj, const VReg &vk);
 void vfdiv_s(const VReg &vd, const VReg &vj, const VReg &vk);
@@ -127,6 +250,24 @@ void vshuf4i_h(const VReg &vd, const VReg &vj, uint32_t ui8);
 void vshuf4i_w(const VReg &vd, const VReg &vj, uint32_t ui8);
 void vshuf4i_d(const VReg &vd, const VReg &vj, uint32_t ui8);
 
+void vbitrev_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vbitrev_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vbitrev_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vbitrev_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vbitrevi_b(const VReg &vd, const VReg &vj, uint32_t ui3);
+void vbitrevi_h(const VReg &vd, const VReg &vj, uint32_t ui4);
+void vbitrevi_w(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vbitrevi_d(const VReg &vd, const VReg &vj, uint32_t ui6);
+
+void vsat_b(const VReg &vd, const VReg &vj, uint32_t ui3);
+void vsat_h(const VReg &vd, const VReg &vj, uint32_t ui4);
+void vsat_w(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vsat_d(const VReg &vd, const VReg &vj, uint32_t ui6);
+void vsat_bu(const VReg &vd, const VReg &vj, uint32_t ui3);
+void vsat_hu(const VReg &vd, const VReg &vj, uint32_t ui4);
+void vsat_wu(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vsat_du(const VReg &vd, const VReg &vj, uint32_t ui6);
+
 void vslli_b(const VReg &vd, const VReg &vj, uint32_t ui3);
 void vslli_h(const VReg &vd, const VReg &vj, uint32_t ui4);
 void vslli_w(const VReg &vd, const VReg &vj, uint32_t ui5);
@@ -139,6 +280,46 @@ void vsrai_b(const VReg &vd, const VReg &vj, uint32_t ui3);
 void vsrai_h(const VReg &vd, const VReg &vj, uint32_t ui4);
 void vsrai_w(const VReg &vd, const VReg &vj, uint32_t ui5);
 void vsrai_d(const VReg &vd, const VReg &vj, uint32_t ui6);
+
+void vseteqz_v(uint32_t cd, const VReg &xj);
+void vsetnez_v(uint32_t cd, const VReg &xj);
+
+void vfsqrt_s(const VReg &xd, const VReg &xj);
+void vfsqrt_d(const VReg &xd, const VReg &xj);
+void vfrecip_s(const VReg &xd, const VReg &xj);
+void vfrecip_d(const VReg &xd, const VReg &xj);
+void vfrsqrt_s(const VReg &xd, const VReg &xj);
+void vfrsqrt_d(const VReg &xd, const VReg &xj);
+
+void vclo_b(const VReg &xd, const VReg &xj);
+void vclo_h(const VReg &xd, const VReg &xj);
+void vclo_w(const VReg &xd, const VReg &xj);
+void vclo_d(const VReg &xd, const VReg &xj);
+
+void vclz_b(const VReg &xd, const VReg &xj);
+void vclz_h(const VReg &xd, const VReg &xj);
+void vclz_w(const VReg &xd, const VReg &xj);
+void vclz_d(const VReg &xd, const VReg &xj);
+
+void vpcnt_b(const VReg &xd, const VReg &xj);
+void vpcnt_h(const VReg &xd, const VReg &xj);
+void vpcnt_w(const VReg &xd, const VReg &xj);
+void vpcnt_d(const VReg &xd, const VReg &xj);
+
+void vsrlni_b_h(const VReg &vd, const VReg &vj, uint32_t ui4);
+void vsrlni_h_w(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vsrlni_w_d(const VReg &vd, const VReg &vj, uint32_t ui6);
+void vsrlni_d_q(const VReg &vd, const VReg &vj, uint32_t ui7);
+
+void vaddi_bu(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vaddi_hu(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vaddi_wu(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vaddi_du(const VReg &vd, const VReg &vj, uint32_t ui5);
+
+void vsubi_bu(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vsubi_hu(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vsubi_wu(const VReg &vd, const VReg &vj, uint32_t ui5);
+void vsubi_du(const VReg &vd, const VReg &vj, uint32_t ui5);
 
 void vbsll_v(const VReg &vd, const VReg &vj, uint32_t ui5);
 void vbsrl_v(const VReg &vd, const VReg &vj, uint32_t ui5);
@@ -379,6 +560,15 @@ void xvabsd_bu(const XVReg &xd, const XVReg &xj, const XVReg &xk);
 void xvabsd_hu(const XVReg &xd, const XVReg &xj, const XVReg &xk);
 void xvabsd_wu(const XVReg &xd, const XVReg &xj, const XVReg &xk);
 void xvabsd_du(const XVReg &xd, const XVReg &xj, const XVReg &xk);
+
+void vhaddw_h_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vhaddw_w_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vhaddw_d_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vhaddw_q_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vhaddw_hu_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vhaddw_wu_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vhaddw_du_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vhaddw_qu_du(const VReg &vd, const VReg &vj, const VReg &vk);
 
 void xvavg_b(const XVReg &xd, const XVReg &xj, const XVReg &xk);
 void xvavg_h(const XVReg &xd, const XVReg &xj, const XVReg &xk);
@@ -1403,6 +1593,10 @@ void ll_w(const XReg &rd, const XReg &rj, int32_t si14);      // 00100000    si1
 void sc_w(const XReg &rd, const XReg &rj, int32_t si14);      // 00100001    si14              rj   rd
 void ll_d(const XReg &rd, const XReg &rj, int32_t si14);      // 00100010    si14              rj   rd
 void sc_d(const XReg &rd, const XReg &rj, int32_t si14);      // 00100011    si14              rj   rd
+void llacq_w(const XReg &xd, const XReg &xj);
+void screl_w(const XReg &xd, const XReg &xj);
+void llacq_d(const XReg &xd, const XReg &xj);
+void screl_d(const XReg &xd, const XReg &xj);
 void ldptr_w(const XReg &rd, const XReg &rj, int32_t si14);   // 00100100    si14              rj   rd
 void stptr_w(const XReg &rd, const XReg &rj, int32_t si14);   // 00100101    si14              rj   rd
 void ldptr_d(const XReg &rd, const XReg &rj, int32_t si14);   // 00100110    si14              rj   rd
@@ -1436,16 +1630,12 @@ void ldx_bu(const XReg &rd, const XReg &rj, const XReg &rk); // 0011100000100000
 void ldx_hu(const XReg &rd, const XReg &rj, const XReg &rk); // 00111000001001000     rk      rj   rd
 void ldx_wu(const XReg &rd, const XReg &rj, const XReg &rk); // 00111000001010000     rk      rj   rd
 
-void preldx(const int32_t hint, const XReg &rj, const XReg &rk);  // 00111000001011000     rk      rj   hint
-void fldx_s(const XReg &fd, const XReg &rj, const XReg &rk);      // 00111000001100000     rk      rj   fd
-void fldx_d(const XReg &fd, const XReg &rj, const XReg &rk);      // 00111000001101000     rk      rj   fd
-void fstx_s(const XReg &fd, const XReg &rj, const XReg &rk);      // 00111000001110000     rk      rj   fd
-void fstx_d(const XReg &fd, const XReg &rj, const XReg &rk);      // 00111000001111000     rk      rj   fd
+void preldx(const int32_t hint, const XReg &rj, const XReg &rk); // 00111000001011000     rk      rj   hint
+void fldx_s(const XReg &fd, const XReg &rj, const XReg &rk);     // 00111000001100000     rk      rj   fd
+void fldx_d(const XReg &fd, const XReg &rj, const XReg &rk);     // 00111000001101000     rk      rj   fd
+void fstx_s(const XReg &fd, const XReg &rj, const XReg &rk);     // 00111000001110000     rk      rj   fd
+void fstx_d(const XReg &fd, const XReg &rj, const XReg &rk);     // 00111000001111000     rk      rj   fd
 
-void ll_acq_w(const XReg &rd, const XReg &rj);                    // 0011100001010111100000        rj   rd
-void sc_rel_w(const XReg &rd, const XReg &rj);                    // 0011100001010111100001        rj   rd
-void ll_acq_d(const XReg &rd, const XReg &rj);                    // 0011100001010111100010        rj   rd
-void sc_rel_d(const XReg &rd, const XReg &rj);                    // 0011100001010111100011        rj   rd
 void amswap_w(const XReg &rd, const XReg &rk, const XReg &rj);    // 00111000011000000     rk      rj   rd
 void amswap_d(const XReg &rd, const XReg &rk, const XReg &rj);    // 00111000011000001     rk      rj   rd
 void amadd_w(const XReg &rd, const XReg &rk, const XReg &rj);     // 00111000011000010     rk      rj   rd
@@ -1483,9 +1673,8 @@ void ammax_db_du(const XReg &rd, const XReg &rk, const XReg &rj); // 00111000011
 void ammin_db_wu(const XReg &rd, const XReg &rk, const XReg &rj); // 00111000011100010     rk      rj   rd
 void ammin_db_du(const XReg &rd, const XReg &rk, const XReg &rj); // 00111000011100011     rk      rj   rd
 
-
-void dbar(const int32_t hint);                                // 00111000011100100       hint
-void ibar(const int32_t hint);                                // 00111000011100101       hint
+void dbar(const int32_t hint); // 00111000011100100       hint
+void ibar(const int32_t hint); // 00111000011100101       hint
 
 void fldgt_s(const XReg &fd, const XReg &rj, const XReg &rk); // 00111000011101000     rk      rj   fd
 void fldgt_d(const XReg &fd, const XReg &rj, const XReg &rk); // 00111000011101001     rk      rj   fd
