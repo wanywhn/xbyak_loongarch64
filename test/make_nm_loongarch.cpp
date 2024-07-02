@@ -522,8 +522,9 @@ public:
         NM("clo.w", "clz.w", "cto.w", "ctz.w", "clo.d", "clz.d", "cto.d", "ctz.d", "revb.2h", "revb.4h",
            "revb.2w", "revb.d", "revh.2w", "revh.d", "bitrev.4b", "bitrev.8b", "bitrev.w", "bitrev.d", 
            "ext.w.h", "ext.w.b", "rdtimel.w", "rdtimeh.w", "rdtime.d", "cpucfg", "asrtle.d", "asrtgt.d",
-	   "iocsrrd.b", "iocsrrd.h", "iocsrrd.w", "iocsrrd.d", "iocsrwr.b", "iocsrwr.h", "iocsrwr.w", "iocsrwr.d"),
-       OPS(WREG_WSP_WZERO, WREG_WSP_WZERO) );
+	   "iocsrrd.b", "iocsrrd.h", "iocsrrd.w", "iocsrrd.d", "iocsrwr.b", "iocsrwr.h", "iocsrwr.w", "iocsrwr.d",
+           "llacq.w", "screl.w", "llacq.d", "screl.d"),
+        OPS(WREG_WSP_WZERO, WREG_WSP_WZERO) );
 
   PUT1( DataProcReg_2Reg_1,
         NM("slli.w", "srai.w", "srli.w", "rotri.w"),

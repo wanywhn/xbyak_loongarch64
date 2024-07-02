@@ -185,14 +185,15 @@ public:
   constexpr explicit RReg(uint32_t index, uint32_t bit) : Reg(index, RREG, bit) {}
 };
 
-class XReg : public RReg {
-public:
-  constexpr explicit XReg(uint32_t index) : RReg(index, 64) {}
-};
-
 class WReg : public RReg {
 public:
   constexpr explicit WReg(uint32_t index) : RReg(index, 32) {}
+};
+
+class XReg : public RReg {
+public:
+  constexpr explicit XReg(uint32_t index) : RReg(index, 64) {}
+  constexpr XReg(WReg index) : RReg(index.getIdx(), 64) {}
 };
 
 // base for SIMD vector regisetr

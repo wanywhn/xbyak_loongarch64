@@ -31,7 +31,29 @@
 #include "xbyak_loongarch64_err.h"
 
 namespace Xbyak_loongarch64 {
+    enum class Cond {
+        EQ,
+        NE,
+        CS,
+        CC,
+        MI,
+        PL,
+        VS,
+        VC,
+        HI,
+        LS,
+        GE,
+        LT,
+        GT,
+        LE,
+        AL,
+        NV,
+        HS = CS,
+        LO = CC,
+    };
 namespace util {
+
+inline constexpr Cond EQ{Cond::EQ}, NE{Cond::NE}, CS{Cond::CS}, CC{Cond::CC}, MI{Cond::MI}, PL{Cond::PL}, VS{Cond::VS}, VC{Cond::VC}, HI{Cond::HI}, LS{Cond::LS}, GE{Cond::GE}, LT{Cond::LT}, GT{Cond::GT}, LE{Cond::LE}, AL{Cond::AL}, NV{Cond::NV}, HS{Cond::HS}, LO{Cond::LO};
 
 enum simdLen_t {
   SIMD_NONE = 0,
