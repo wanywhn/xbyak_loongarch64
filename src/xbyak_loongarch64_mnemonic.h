@@ -985,52 +985,52 @@ void CodeGenerator::vsub_d(const VReg &vd, const VReg &vj, const VReg &vk) { Las
 void CodeGenerator::vsub_q(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100010010110, TYPE_D, vk, vj, vd); }
 
 void CodeGenerator::vaddwev_h_b(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_B, vk, vj, vd); }
-void CodeGenerator::vaddwev_w_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_H, vk, vj, vk); }
-void CodeGenerator::vaddwev_d_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_W, vk, vj, vk); }
-void CodeGenerator::vaddwev_q_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_D, vk, vj, vk); }
+void CodeGenerator::vaddwev_w_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_H, vk, vj, vd); }
+void CodeGenerator::vaddwev_d_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_W, vk, vj, vd); }
+void CodeGenerator::vaddwev_q_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_D, vk, vj, vd); }
 
 void CodeGenerator::vaddwod_h_b(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010001, TYPE_B, vk, vj, vd); }
-void CodeGenerator::vaddwod_w_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010001, TYPE_H, vk, vj, vk); }
-void CodeGenerator::vaddwod_d_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010001, TYPE_W, vk, vj, vk); }
-void CodeGenerator::vaddwod_q_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010001, TYPE_D, vk, vj, vk); }
+void CodeGenerator::vaddwod_w_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010001, TYPE_H, vk, vj, vd); }
+void CodeGenerator::vaddwod_d_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010001, TYPE_W, vk, vj, vd); }
+void CodeGenerator::vaddwod_q_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010001, TYPE_D, vk, vj, vd); }
 
 void CodeGenerator::vaddwev_h_bu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010111, TYPE_B, vk, vj, vd); }
-void CodeGenerator::vaddwev_w_hu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010111, TYPE_H, vk, vj, vk); }
-void CodeGenerator::vaddwev_d_wu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010111, TYPE_W, vk, vj, vk); }
-void CodeGenerator::vaddwev_q_du(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010111, TYPE_D, vk, vj, vk); }
+void CodeGenerator::vaddwev_w_hu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010111, TYPE_H, vk, vj, vd); }
+void CodeGenerator::vaddwev_d_wu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010111, TYPE_W, vk, vj, vd); }
+void CodeGenerator::vaddwev_q_du(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000010111, TYPE_D, vk, vj, vd); }
 
 void CodeGenerator::vaddwod_h_bu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011001, TYPE_B, vk, vj, vd); }
-void CodeGenerator::vaddwod_w_hu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011001, TYPE_H, vk, vj, vk); }
-void CodeGenerator::vaddwod_d_wu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011001, TYPE_W, vk, vj, vk); }
-void CodeGenerator::vaddwod_q_du(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011001, TYPE_D, vk, vj, vk); }
+void CodeGenerator::vaddwod_w_hu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011001, TYPE_H, vk, vj, vd); }
+void CodeGenerator::vaddwod_d_wu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011001, TYPE_W, vk, vj, vd); }
+void CodeGenerator::vaddwod_q_du(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011001, TYPE_D, vk, vj, vd); }
 
 void CodeGenerator::vaddwev_h_bu_b(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_B, vk, vj, vd); }
-void CodeGenerator::vaddwev_w_hu_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_H, vk, vj, vk); }
-void CodeGenerator::vaddwev_d_wu_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_W, vk, vj, vk); }
-void CodeGenerator::vaddwev_q_du_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_D, vk, vj, vk); }
+void CodeGenerator::vaddwev_w_hu_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_H, vk, vj, vd); }
+void CodeGenerator::vaddwev_d_wu_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_W, vk, vj, vd); }
+void CodeGenerator::vaddwev_q_du_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000011111, TYPE_D, vk, vj, vd); }
 
 void CodeGenerator::vaddwod_h_bu_b(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100000, TYPE_B, vk, vj, vd); }
-void CodeGenerator::vaddwod_w_hu_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100000, TYPE_H, vk, vj, vk); }
-void CodeGenerator::vaddwod_d_wu_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100000, TYPE_W, vk, vj, vk); }
-void CodeGenerator::vaddwod_q_du_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100000, TYPE_D, vk, vj, vk); }
+void CodeGenerator::vaddwod_w_hu_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100000, TYPE_H, vk, vj, vd); }
+void CodeGenerator::vaddwod_d_wu_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100000, TYPE_W, vk, vj, vd); }
+void CodeGenerator::vaddwod_q_du_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100000, TYPE_D, vk, vj, vd); }
 
 
 
 void CodeGenerator::vsadd_b(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100011, TYPE_B, vk, vj, vd); }
-void CodeGenerator::vsadd_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100011, TYPE_H, vk, vj, vk); }
-void CodeGenerator::vsadd_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100011, TYPE_W, vk, vj, vk); }
-void CodeGenerator::vsadd_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100011, TYPE_D, vk, vj, vk); }
+void CodeGenerator::vsadd_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100011, TYPE_H, vk, vj, vd); }
+void CodeGenerator::vsadd_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100011, TYPE_W, vk, vj, vd); }
+void CodeGenerator::vsadd_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100011, TYPE_D, vk, vj, vd); }
 
 
 void CodeGenerator::vsadd_bu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100101, TYPE_B, vk, vj, vd); }
-void CodeGenerator::vsadd_hu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100101, TYPE_H, vk, vj, vk); }
-void CodeGenerator::vsadd_wu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100101, TYPE_W, vk, vj, vk); }
-void CodeGenerator::vsadd_du(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100101, TYPE_D, vk, vj, vk); }
+void CodeGenerator::vsadd_hu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100101, TYPE_H, vk, vj, vd); }
+void CodeGenerator::vsadd_wu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100101, TYPE_W, vk, vj, vd); }
+void CodeGenerator::vsadd_du(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100101, TYPE_D, vk, vj, vd); }
 
 void CodeGenerator::vssub_b(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100100, TYPE_B, vk, vj, vd); }
-void CodeGenerator::vssub_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100100, TYPE_H, vk, vj, vk); }
-void CodeGenerator::vssub_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100100, TYPE_W, vk, vj, vk); }
-void CodeGenerator::vssub_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100100, TYPE_D, vk, vj, vk); }
+void CodeGenerator::vssub_h(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100100, TYPE_H, vk, vj, vd); }
+void CodeGenerator::vssub_w(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100100, TYPE_W, vk, vj, vd); }
+void CodeGenerator::vssub_d(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100100, TYPE_D, vk, vj, vd); }
 
 
 void CodeGenerator::vssub_bu(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100000100110, TYPE_B, vk, vj, vd); }
