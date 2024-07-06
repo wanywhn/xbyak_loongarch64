@@ -89,6 +89,7 @@ public:
     } else {
       msg_ = tbl[err_];
     }
+    fprintf(stderr, "msg: %s\n", msg_);
   }
   operator int() const { return err_; }
   const char *what() const throw() { return msg_; }

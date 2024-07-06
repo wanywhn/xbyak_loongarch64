@@ -124,6 +124,15 @@ void vmul_h(const VReg &vd, const VReg &vj, const VReg &vk);
 void vmul_w(const VReg &vd, const VReg &vj, const VReg &vk);
 void vmul_d(const VReg &vd, const VReg &vj, const VReg &vk);
 
+void vmuh_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmuh_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmuh_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmuh_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmuh_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmuh_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmuh_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmuh_du(const VReg &vd, const VReg &vj, const VReg &vk);
+
 void vdiv_b(const VReg &vd, const VReg &vj, const VReg &vk);
 void vdiv_h(const VReg &vd, const VReg &vj, const VReg &vk);
 void vdiv_w(const VReg &vd, const VReg &vj, const VReg &vk);
@@ -305,6 +314,39 @@ void vpcnt_b(const VReg &xd, const VReg &xj);
 void vpcnt_h(const VReg &xd, const VReg &xj);
 void vpcnt_w(const VReg &xd, const VReg &xj);
 void vpcnt_d(const VReg &xd, const VReg &xj);
+
+void vmulwev_h_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_w_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_d_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_q_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_h_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_w_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_d_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_q_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_h_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_w_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_d_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_q_du(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_h_bu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_w_hu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_d_wu(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_q_du(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vmulwev_h_bu_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_w_hu_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_d_wu_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwev_q_du_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_h_bu_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_w_hu_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_d_wu_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vmulwod_q_du_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vmskltz_b(const VReg &xd, const VReg &xj);
+void vmskltz_h(const VReg &xd, const VReg &xj);
+void vmskltz_w(const VReg &xd, const VReg &xj);
+void vmskltz_d(const VReg &xd, const VReg &xj);
+void vmskgez_b(const VReg &xd, const VReg &xj);
+void vmsknz_b(const VReg &xd, const VReg &xj);
 
 void vsrlni_b_h(const VReg &vd, const VReg &vj, uint32_t ui4);
 void vsrlni_h_w(const VReg &vd, const VReg &vj, uint32_t ui5);
