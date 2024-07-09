@@ -1264,82 +1264,82 @@ void CodeGenerator::bstrins_w(const XReg& rd, const XReg& rj, uint32_t msbw, uin
 void CodeGenerator::bstrpick_w(const XReg& rd, const XReg& rj, uint32_t msbw, uint32_t lsbw) { Loongarch2Reg2Param(0b11, msbw, lsbw, rj.getIdx(), rd.getIdx(), 2); }
 void CodeGenerator::bstrins_d(const XReg& rd, const XReg& rj, uint32_t msbd, uint32_t lsbd) { Loongarch2Reg2Param(0b10, msbd, lsbd, rj.getIdx(), rd.getIdx(), 3); }
 void CodeGenerator::bstrpick_d(const XReg& rd, const XReg& rj, uint32_t msbd, uint32_t lsbd) { Loongarch2Reg2Param(0b11, msbd, lsbd, rj.getIdx(), rd.getIdx(), 3); }
-void CodeGenerator::fadd_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000000001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fadd_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000000010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fsub_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000000101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fsub_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000000110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmul_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000001001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmul_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000001010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fdiv_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000001101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fdiv_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000001110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmax_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000010001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmax_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000010010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmin_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000010101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmin_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000010110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmaxa_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000011001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmaxa_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000011010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmina_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000011101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmina_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000011110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fscaleb_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000100001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fscaleb_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000100010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fcopysign_s(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000100101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fcopysign_d(const XReg& fd, const XReg& fj, const XReg& fk) { Loongarch3Reg(0b1000100110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fabs_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100000001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fabs_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100000010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fneg_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100000101, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fneg_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100000110, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::flogb_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100001001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::flogb_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100001010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fclass_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100001101, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fclass_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100001110, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fsqrt_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100010001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fsqrt_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100010010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::frecip_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100010101, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::frecip_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100010110, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::frsqrt_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100011001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::frsqrt_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100011010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmov_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100100101, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmov_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100010100100110, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::movgr2fr_w(const XReg& fd, const XReg& rj) { Loongarch2Reg(0b0000000100010100101001, rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::movgr2fr_d(const XReg& fd, const XReg& rj) { Loongarch2Reg(0b0000000100010100101010, rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::movgr2frh_w(const XReg& fd, const XReg& rj) { Loongarch2Reg(0b0000000100010100101011, rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::movfr2gr_s(const XReg& rd, const XReg& fj) { Loongarch2Reg(0b100010100101101, fj.getIdx(), rd.getIdx()); }
-void CodeGenerator::movfr2gr_d(const XReg& rd, const XReg& fj) { Loongarch2Reg(0b100010100101110, fj.getIdx(), rd.getIdx()); }
-void CodeGenerator::movfrh2gr_s(const XReg& rd, const XReg& fj) { Loongarch2Reg(0b100010100101111, fj.getIdx(), rd.getIdx()); }
-void CodeGenerator::movgr2fcsr(const XReg& fcsr, const XReg& rj) { Loongarch2Reg(0b100010100110000, rj.getIdx(), fcsr.getIdx()); }
-void CodeGenerator::movfcsr2gr(const XReg& rd, const XReg& fcsr) { Loongarch2Reg(0b100010100110010, fcsr.getIdx(), rd.getIdx()); }
-void CodeGenerator::movfr2cf(const uint32_t cd, const XReg& fj) { Loongarch2RegZeroExtend(0b100010100110100, fj.getIdx(), cd, 1); }
-void CodeGenerator::movcf2fr(const XReg& fd, const uint32_t cj) { Loongarch2RegZeroExtend(0b100010100110101, cj, fd.getIdx(), 2); }
+void CodeGenerator::fadd_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000000001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fadd_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000000010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fsub_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000000101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fsub_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000000110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmul_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000001001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmul_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000001010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fdiv_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000001101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fdiv_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000001110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmax_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000010001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmax_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000010010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmin_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000010101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmin_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000010110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmaxa_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000011001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmaxa_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000011010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmina_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000011101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmina_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000011110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fscaleb_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000100001, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fscaleb_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000100010, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fcopysign_s(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000100101, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fcopysign_d(const VReg& fd, const VReg& fj, const VReg& fk) { Loongarch3Reg(0b1000100110, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fabs_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100000001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fabs_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100000010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fneg_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100000101, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fneg_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100000110, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::flogb_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100001001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::flogb_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100001010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fclass_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100001101, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fclass_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100001110, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fsqrt_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100010001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fsqrt_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100010010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::frecip_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100010101, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::frecip_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100010110, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::frsqrt_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100011001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::frsqrt_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100011010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmov_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100100101, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmov_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100010100100110, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::movgr2fr_w(const VReg& fd, const XReg& rj) { Loongarch2Reg(0b0000000100010100101001, rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::movgr2fr_d(const VReg& fd, const XReg& rj) { Loongarch2Reg(0b0000000100010100101010, rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::movgr2frh_w(const VReg& fd, const XReg& rj) { Loongarch2Reg(0b0000000100010100101011, rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::movfr2gr_s(const XReg& rd, const VReg& fj) { Loongarch2Reg(0b100010100101101, fj.getIdx(), rd.getIdx()); }
+void CodeGenerator::movfr2gr_d(const XReg& rd, const VReg& fj) { Loongarch2Reg(0b100010100101110, fj.getIdx(), rd.getIdx()); }
+void CodeGenerator::movfrh2gr_s(const XReg& rd, const VReg& fj) { Loongarch2Reg(0b100010100101111, fj.getIdx(), rd.getIdx()); }
+void CodeGenerator::movgr2fcsr(const VReg& fcsr, const XReg& rj) { Loongarch2Reg(0b100010100110000, rj.getIdx(), fcsr.getIdx()); }
+void CodeGenerator::movfcsr2gr(const XReg& rd, const VReg& fcsr) { Loongarch2Reg(0b100010100110010, fcsr.getIdx(), rd.getIdx()); }
+void CodeGenerator::movfr2cf(const uint32_t cd, const VReg& fj) { Loongarch2RegZeroExtend(0b100010100110100, fj.getIdx(), cd, 1); }
+void CodeGenerator::movcf2fr(const VReg& fd, const uint32_t cj) { Loongarch2RegZeroExtend(0b100010100110101, cj, fd.getIdx(), 2); }
 void CodeGenerator::movgr2cf(const uint32_t cd, const XReg& rj) { Loongarch2RegZeroExtend(0b100010100110110, rj.getIdx(), cd, 1); }
 void CodeGenerator::movcf2gr(const XReg& rd, const uint32_t cj) { Loongarch2RegZeroExtend(0b100010100110111, cj, rd.getIdx(), 2); }
-void CodeGenerator::fcvt_s_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011001000110, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fcvt_d_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011001001001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrm_w_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010000001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrm_w_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010000010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrm_l_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010001001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrm_l_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010001010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrp_w_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010010001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrp_w_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010010010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrp_l_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010011001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrp_l_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010011010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrz_w_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010100001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrz_w_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010100010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrz_l_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010101001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrz_l_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010101010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrne_w_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010110001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrne_w_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010110010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrne_l_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010111001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftintrne_l_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011010111010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftint_w_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011011000001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftint_w_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011011000010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftint_l_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011011001001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ftint_l_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011011001010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ffint_s_w(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011101000100, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ffint_s_l(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011101000110, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ffint_d_w(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011101001000, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::ffint_d_l(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011101001010, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::frint_s(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011110010001, fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::frint_d(const XReg& fd, const XReg& fj) { Loongarch2Reg(0b100011110010010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fcvt_s_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011001000110, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fcvt_d_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011001001001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrm_w_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010000001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrm_w_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010000010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrm_l_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010001001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrm_l_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010001010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrp_w_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010010001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrp_w_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010010010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrp_l_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010011001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrp_l_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010011010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrz_w_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010100001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrz_w_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010100010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrz_l_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010101001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrz_l_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010101010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrne_w_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010110001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrne_w_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010110010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrne_l_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010111001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftintrne_l_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011010111010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftint_w_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011011000001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftint_w_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011011000010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftint_l_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011011001001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ftint_l_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011011001010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ffint_s_w(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011101000100, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ffint_s_l(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011101000110, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ffint_d_w(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011101001000, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::ffint_d_l(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011101001010, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::frint_s(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011110010001, fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::frint_d(const VReg& fd, const VReg& fj) { Loongarch2Reg(0b100011110010010, fj.getIdx(), fd.getIdx()); }
 void CodeGenerator::slti(const XReg& rd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b1000, rj.getIdx(), rd.getIdx(), si12, 2); }
 void CodeGenerator::sltui(const XReg& rd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b1001, rj.getIdx(), rd.getIdx(), si12, 2); }
 void CodeGenerator::addi_w(const XReg& rd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b1010, rj.getIdx(), rd.getIdx(), si12, 2); }
@@ -1370,59 +1370,59 @@ void CodeGenerator::tlbfill() { LoongarchOnlyOpcode(0b00000110010010000011010000
 void CodeGenerator::ertn() { LoongarchOnlyOpcode(0b00000110010010000011100000000000); }
 void CodeGenerator::idle(int32_t level15) { Loongarch1Code(0b00000110010010001, level15); }
 void CodeGenerator::invtlb(const int32_t op, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00000110010010011, rk.getIdx(), rj.getIdx(), op); }
-void CodeGenerator::fmadd_s(const XReg& fd, const XReg& fj, const XReg& fk, const XReg& fa) { Loongarch4Reg(0b10000001, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmadd_d(const XReg& fd, const XReg& fj, const XReg& fk, const XReg& fa) { Loongarch4Reg(0b10000010, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmsub_s(const XReg& fd, const XReg& fj, const XReg& fk, const XReg& fa) { Loongarch4Reg(0b10000101, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fmsub_d(const XReg& fd, const XReg& fj, const XReg& fk, const XReg& fa) { Loongarch4Reg(0b10000110, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fnmadd_s(const XReg& fd, const XReg& fj, const XReg& fk, const XReg& fa) { Loongarch4Reg(0b10001001, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fnmadd_d(const XReg& fd, const XReg& fj, const XReg& fk, const XReg& fa) { Loongarch4Reg(0b10001010, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fnmsub_s(const XReg& fd, const XReg& fj, const XReg& fk, const XReg& fa) { Loongarch4Reg(0b10001101, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fnmsub_d(const XReg& fd, const XReg& fj, const XReg& fk, const XReg& fa) { Loongarch4Reg(0b10001110, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fcmp_caf_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b00000, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_caf_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b00000, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cun_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b01000, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cun_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b01000, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_ceq_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b00100, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_ceq_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b00100, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cueq_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b01100, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cueq_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b01100, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_clt_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b00010, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_clt_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b00010, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cult_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b01010, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cult_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b01010, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cle_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b00110, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cle_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b00110, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cule_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b01110, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cule_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b01110, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cne_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b10000, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cne_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b10000, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cor_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b10100, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cor_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b10100, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cune_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b11000, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_cune_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b11000, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_saf_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b00001, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_saf_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b00001, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sun_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b01001, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sun_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b01001, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_seq_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b00101, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_seq_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b00101, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sueq_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b01101, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sueq_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b01101, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_slt_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b00011, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_slt_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b00011, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sult_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b01011, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sult_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b01011, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sle_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b00111, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sle_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b00111, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sule_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b01111, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sule_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b01111, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sne_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b10001, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sne_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b10001, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sor_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b10101, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sor_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b10101, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sune_s(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000001, 0b11001, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fcmp_sune_d(const uint32_t cd, const XReg& fj, const XReg& fk) { Loongarch4Reg(0b11000010, 0b11001, fk.getIdx(), fj.getIdx(), cd); }
-void CodeGenerator::fsel(const XReg& fd, const XReg& fj, const XReg& fk, const uint32_t ca) { Loongarch4Reg(0b000011010000, ca, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmadd_s(const VReg& fd, const VReg& fj, const VReg& fk, const VReg& fa) { Loongarch4Reg(0b10000001, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmadd_d(const VReg& fd, const VReg& fj, const VReg& fk, const VReg& fa) { Loongarch4Reg(0b10000010, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmsub_s(const VReg& fd, const VReg& fj, const VReg& fk, const VReg& fa) { Loongarch4Reg(0b10000101, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fmsub_d(const VReg& fd, const VReg& fj, const VReg& fk, const VReg& fa) { Loongarch4Reg(0b10000110, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fnmadd_s(const VReg& fd, const VReg& fj, const VReg& fk, const VReg& fa) { Loongarch4Reg(0b10001001, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fnmadd_d(const VReg& fd, const VReg& fj, const VReg& fk, const VReg& fa) { Loongarch4Reg(0b10001010, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fnmsub_s(const VReg& fd, const VReg& fj, const VReg& fk, const VReg& fa) { Loongarch4Reg(0b10001101, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fnmsub_d(const VReg& fd, const VReg& fj, const VReg& fk, const VReg& fa) { Loongarch4Reg(0b10001110, fa.getIdx(), fk.getIdx(), fj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fcmp_caf_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b00000, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_caf_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b00000, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cun_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b01000, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cun_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b01000, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_ceq_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b00100, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_ceq_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b00100, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cueq_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b01100, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cueq_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b01100, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_clt_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b00010, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_clt_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b00010, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cult_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b01010, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cult_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b01010, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cle_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b00110, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cle_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b00110, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cule_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b01110, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cule_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b01110, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cne_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b10000, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cne_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b10000, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cor_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b10100, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cor_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b10100, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cune_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b11000, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_cune_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b11000, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_saf_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b00001, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_saf_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b00001, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sun_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b01001, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sun_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b01001, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_seq_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b00101, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_seq_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b00101, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sueq_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b01101, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sueq_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b01101, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_slt_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b00011, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_slt_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b00011, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sult_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b01011, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sult_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b01011, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sle_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b00111, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sle_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b00111, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sule_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b01111, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sule_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b01111, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sne_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b10001, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sne_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b10001, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sor_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b10101, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sor_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b10101, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sune_s(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000001, 0b11001, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fcmp_sune_d(const uint32_t cd, const VReg& fj, const VReg& fk) { Loongarch4Reg(0b11000010, 0b11001, fk.getIdx(), fj.getIdx(), cd); }
+void CodeGenerator::fsel(const VReg& fd, const VReg& fj, const VReg& fk, const uint32_t ca) { Loongarch4Reg(0b000011010000, ca, fk.getIdx(), fj.getIdx(), fd.getIdx()); }
 void CodeGenerator::addu16i_d(const XReg& rd, const XReg& rj, int32_t si16) { Loongarch2Reg1Offset(0b000100, rj.getIdx(), rd.getIdx(), si16, 1); }
 void CodeGenerator::lu12i_w(const XReg& rd, int32_t si20) { Loongarch1Reg1Imm(0b0001010, si20, rd.getIdx()); }
 void CodeGenerator::lu32i_d(const XReg& rd, int32_t si20) { Loongarch1Reg1Imm(0b0001011, si20, rd.getIdx()); }
@@ -1451,10 +1451,10 @@ void CodeGenerator::ld_bu(const XReg& rd, const XReg& rj, int32_t si12) { Loonga
 void CodeGenerator::ld_hu(const XReg& rd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101001, rj.getIdx(), rd.getIdx(), si12, 2); }
 void CodeGenerator::ld_wu(const XReg& rd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101010, rj.getIdx(), rd.getIdx(), si12, 2); }
 void CodeGenerator::preld(const int32_t hint, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101011, rj.getIdx(), hint, si12, 2); }
-void CodeGenerator::fld_s(const XReg& fd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101100, rj.getIdx(), fd.getIdx(), si12, 2); }
-void CodeGenerator::fst_s(const XReg& fd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101101, rj.getIdx(), fd.getIdx(), si12, 2); }
-void CodeGenerator::fld_d(const XReg& fd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101110, rj.getIdx(), fd.getIdx(), si12, 2); }
-void CodeGenerator::fst_d(const XReg& fd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101111, rj.getIdx(), fd.getIdx(), si12, 2); }
+void CodeGenerator::fld_s(const VReg& fd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101100, rj.getIdx(), fd.getIdx(), si12, 2); }
+void CodeGenerator::fst_s(const VReg& fd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101101, rj.getIdx(), fd.getIdx(), si12, 2); }
+void CodeGenerator::fld_d(const VReg& fd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101110, rj.getIdx(), fd.getIdx(), si12, 2); }
+void CodeGenerator::fst_d(const VReg& fd, const XReg& rj, int32_t si12) { Loongarch2Reg1Offset(0b0010101111, rj.getIdx(), fd.getIdx(), si12, 2); }
 void CodeGenerator::ldx_b(const XReg& rd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000000000000, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::ldx_h(const XReg& rd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000000001000, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::ldx_w(const XReg& rd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000000010000, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
@@ -1467,10 +1467,10 @@ void CodeGenerator::ldx_bu(const XReg& rd, const XReg& rj, const XReg& rk) { Loo
 void CodeGenerator::ldx_hu(const XReg& rd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001001000, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::ldx_wu(const XReg& rd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001010000, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::preldx(const int32_t hint, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001011000, rk.getIdx(), rj.getIdx(), hint); }
-void CodeGenerator::fldx_s(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001100000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fldx_d(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001101000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fstx_s(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001110000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fstx_d(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001111000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fldx_s(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001100000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fldx_d(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001101000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fstx_s(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001110000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fstx_d(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000001111000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
 void CodeGenerator::amswap_w(const XReg& rd, const XReg& rk, const XReg& rj) { Loongarch3Reg(0b00111000011000000, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::amswap_d(const XReg& rd, const XReg& rk, const XReg& rj) { Loongarch3Reg(0b00111000011000001, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::amadd_w(const XReg& rd, const XReg& rk, const XReg& rj) { Loongarch3Reg(0b00111000011000010, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
@@ -1509,14 +1509,14 @@ void CodeGenerator::ammin_db_wu(const XReg& rd, const XReg& rk, const XReg& rj) 
 void CodeGenerator::ammin_db_du(const XReg& rd, const XReg& rk, const XReg& rj) { Loongarch3Reg(0b00111000011100011, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::dbar(const int32_t hint) { Loongarch1Code(0b00111000011100100, hint); }
 void CodeGenerator::ibar(const int32_t hint) { Loongarch1Code(0b00111000011100101, hint); }
-void CodeGenerator::fldgt_s(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fldgt_d(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101001, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fldle_s(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101010, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fldle_d(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101011, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fstgt_s(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101100, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fstgt_d(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101101, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fstle_s(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101110, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
-void CodeGenerator::fstle_d(const XReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101111, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fldgt_s(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101000, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fldgt_d(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101001, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fldle_s(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101010, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fldle_d(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101011, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fstgt_s(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101100, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fstgt_d(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101101, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fstle_s(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101110, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
+void CodeGenerator::fstle_d(const VReg& fd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011101111, rk.getIdx(), rj.getIdx(), fd.getIdx()); }
 void CodeGenerator::ldgt_b(const XReg& rd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011110000, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::ldgt_h(const XReg& rd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011110001, rk.getIdx(), rj.getIdx(), rd.getIdx()); }
 void CodeGenerator::ldgt_w(const XReg& rd, const XReg& rj, const XReg& rk) { Loongarch3Reg(0b00111000011110010, rk.getIdx(), rj.getIdx(), rd.getIdx()); }

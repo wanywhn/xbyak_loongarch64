@@ -183,9 +183,9 @@ public:
   const XReg c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25;
   const XReg c26, c27, c28, c29, c30, c31;
 
-  const XReg f0, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12;
-  const XReg f13, f14, f15, f16, f17, f18, f19, f20, f21, f22, f23, f24, f25;
-  const XReg f26, f27, f28, f29, f30, f31;
+  const VReg f0, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12;
+  const VReg f13, f14, f15, f16, f17, f18, f19, f20, f21, f22, f23, f24, f25;
+  const VReg f26, f27, f28, f29, f30, f31;
 
   const VReg vr0, vr1, vr2, vr3, vr4, vr5, vr6, vr7, vr8, vr9, vr10, vr11, vr12;
   const VReg vr13, vr14, vr15, vr16, vr17, vr18, vr19, vr20, vr21, vr22, vr23;
