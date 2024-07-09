@@ -1813,4 +1813,7 @@ void CodeGenerator::vmskltz_d(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b
 void CodeGenerator::vmskgez_b(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b0111001010011100010100, xj.getIdx(), xd.getIdx()); }
 void CodeGenerator::vmsknz_b(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b0111001010011100011000, xj.getIdx(), xd.getIdx()); }
 
+void CodeGenerator::vfclass_s(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b0111001010011100110101, xj.getIdx(), xd.getIdx()); }
+void CodeGenerator::vfclass_d(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b0111001010011100110110, xj.getIdx(), xd.getIdx()); }
+
 /****** Loongarch base end *****/

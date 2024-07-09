@@ -1776,4 +1776,7 @@ void vmuh_hu(const VReg &vd, const VReg &vj, const VReg &vk);
 void vmuh_wu(const VReg &vd, const VReg &vj, const VReg &vk);
 void vmuh_du(const VReg &vd, const VReg &vj, const VReg &vk);
 
+void vfclass_s(const VReg &xd, const VReg &xj);
+void vfclass_d(const VReg &xd, const VReg &xj);
+
 /*Base end*/
