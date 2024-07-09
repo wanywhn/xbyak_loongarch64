@@ -1295,6 +1295,9 @@ void CodeGenerator::vsrai_d(const VReg &vd, const VReg &vj, uint32_t ui6) { Lasx
 void CodeGenerator::vseteqz_v(uint32_t cd, const VReg &xj) { LasxFormatCFR(0b01110010100111001001, 0b10, xj, cd); }
 void CodeGenerator::vsetnez_v(uint32_t cd, const VReg &xj) { LasxFormatCFR(0b01110010100111001001, 0b11, xj, cd); }
 
+void CodeGenerator::vfclass_s(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b0111001010011100110101, xj.getIdx(), xd.getIdx()); }
+void CodeGenerator::vfclass_d(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b0111001010011100110110, xj.getIdx(), xd.getIdx()); }
+
 void CodeGenerator::vfsqrt_s(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b0111001010011100111001, xj.getIdx(), xd.getIdx()); }
 void CodeGenerator::vfsqrt_d(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b0111001010011100111010, xj.getIdx(), xd.getIdx()); }
 void CodeGenerator::vfrecip_s(const VReg &xd, const VReg &xj) { Loongarch2Reg(0b0111001010011100111101, xj.getIdx(), xd.getIdx()); }

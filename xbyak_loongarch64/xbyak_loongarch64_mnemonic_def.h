@@ -293,6 +293,9 @@ void vsrai_d(const VReg &vd, const VReg &vj, uint32_t ui6);
 void vseteqz_v(uint32_t cd, const VReg &xj);
 void vsetnez_v(uint32_t cd, const VReg &xj);
 
+void vfclass_s(const VReg &xd, const VReg &xj);
+void vfclass_d(const VReg &xd, const VReg &xj);
+
 void vfsqrt_s(const VReg &xd, const VReg &xj);
 void vfsqrt_d(const VReg &xd, const VReg &xj);
 void vfrecip_s(const VReg &xd, const VReg &xj);
