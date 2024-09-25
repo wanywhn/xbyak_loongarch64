@@ -39,6 +39,7 @@ const uint64_t WZERO =  1ULL << flagBit++; /** Test vector is {zero} */
 const uint64_t XREG =  1ULL << flagBit++;
 const uint64_t XREG_DIFF = 1ULL << flagBit++;
 
+const uint64_t IMM2BIT_FCSR =  1ULL << flagBit++; /** Test vector is {3 1, 2} */
 const uint64_t IMM3BIT =  1ULL << flagBit++; /** Test vector is {0, 1, 2, 4, 7} */
 const uint64_t IMM3BIT_FCC =  1ULL << flagBit++; /** Test vector is {0, 1, 2, 4, 7} */
 const uint64_t IMM4BIT =  1ULL << flagBit++; /** Test vector is {0, 1, ..., 8, 15 } */
@@ -119,6 +120,8 @@ class Test {
   std::vector<std::string> tv_WZERO = {"$zero"};
   std::vector<std::string> tv_XREG = {"$f0", "$f1", "$f2", "$f4", "$f5", "$f7", "$f8", "$f10", "$f11", "$f16", "$f17", "$f31"};
   std::vector<std::string> tv_XREG_DIFF = {"$f3", "$f6", "$f9", "$f12", "$f13", "$f14", "$f15", "$f18", "$f19", "$f20", "$f21", "$f22"};
+  std::vector<std::string> jtv_IMM2BIT_FCSR = {"$fcsr3", "$fcsr1", "$fcsr2"};
+  std::vector<std::string> tv_IMM2BIT_FCSR = {"3", "1", "2"};
   std::vector<std::string> tv_IMM3BIT = {"3", "0", "1", "2", "4", "7"};
   std::vector<std::string> jtv_IMM3BIT_FCC = {"3", "0", "1", "2", "4", "7"};
   std::vector<std::string> tv_IMM3BIT_FCC = {"$fcc3", "$fcc0", "$fcc1", "$fcc2", "$fcc4", "$fcc7"};
@@ -161,6 +164,7 @@ class Test {
                                                           &tv_WZERO,
                                                           &tv_XREG,
                                                           &tv_XREG_DIFF,
+                                                          &tv_IMM2BIT_FCSR,
                                                           &tv_IMM3BIT,
                                                           &tv_IMM3BIT_FCC,
                                                           &tv_IMM4BIT,
@@ -183,6 +187,7 @@ class Test {
                                                            &tv_WZERO,
                                                            &tv_XREG,
                                                            &tv_XREG_DIFF,
+                                                           &jtv_IMM2BIT_FCSR,
                                                            &tv_IMM3BIT,
                                                            &jtv_IMM3BIT_FCC,
                                                            &tv_IMM4BIT,
@@ -537,6 +542,14 @@ public:
   PUT1( DataProcReg_2Reg_8,
         NM("fld.s", "fst.s", "fld.d", "fst.d"),
         OPS(XREG, WREG, IMM12BIT_SIGNED) );
+
+  PUT1( DataProcReg_2Reg_9,
+        NM("movfcsr2gr"),
+        OPS(WREG, IMM2BIT_FCSR) );
+
+  PUT1( DataProcReg_2Reg_10,
+        NM("movgr2fcsr"),
+        OPS(IMM2BIT_FCSR, WREG) );
 
   void putDataProcReg() {
     putDataProcReg_4Reg_0();
