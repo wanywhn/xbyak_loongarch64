@@ -1642,6 +1642,11 @@ public:
   PUT1( DataProc_2VR, NM(
 "vffint.s.w",
 "vftint.w.s",
+"vffint.s.wu",
+"vffint.d.l",
+"vffint.d.lu",
+"vffintl.d.w",
+"vffinth.d.w",
 "vfclass.s",
 "vfclass.d",
 "vmskltz.b",

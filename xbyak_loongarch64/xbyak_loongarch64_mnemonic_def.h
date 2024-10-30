@@ -91,6 +91,11 @@ void vnor_v(const VReg &vd, const VReg &vj, const VReg &vk);
 void vandn_v(const VReg &vd, const VReg &vj, const VReg &vk);
 void vorn_v(const VReg &vd, const VReg &vj, const VReg &vk);
 void vffint_s_w(const VReg &vd, const VReg &vj);
+void vffint_s_wu(const VReg &vd, const VReg &vj);
+void vffint_d_l(const VReg &vd, const VReg &vj);
+void vffint_d_lu(const VReg &vd, const VReg &vj);
+void vffintl_d_w(const VReg &vd, const VReg &vj);
+void vffinth_d_w(const VReg &vd, const VReg &vj);
 void vftint_w_s(const VReg &vd, const VReg &vj);
 
 void vreplgr2vr_b(const VReg &vd, const XReg &rj);
