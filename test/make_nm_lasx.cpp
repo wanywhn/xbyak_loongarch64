@@ -558,7 +558,7 @@ public:
 "vsat.w",
 "vbitrevi.w",
 ), OPS(VREG, VREG, IMM5BIT) );
-  PUT1( DataProc_2VR_UINT8, NM( "vextrins.d", "vextrins.w", "vextrins.h", "vextrins.b", "vshuf4i.b", "vshuf4i.h", "vshuf4i.w", "vshuf4i.d" ), OPS(VREG, VREG, IMM8BIT) );
+  PUT1( DataProc_2VR_UINT8, NM( "vandi.b", "vori.b", "vxori.b", "vnori.b", "vextrins.d", "vextrins.w", "vextrins.h", "vextrins.b", "vshuf4i.b", "vshuf4i.h", "vshuf4i.w", "vshuf4i.d" ), OPS(VREG, VREG, IMM8BIT) );
   PUT1( DataProc_2XR_GR,
         NM("xvreplve.b", "xvreplve.h", "xvreplve.w", "xvreplve.d"),
         OPS(XVREG, XVREG, XREG) );

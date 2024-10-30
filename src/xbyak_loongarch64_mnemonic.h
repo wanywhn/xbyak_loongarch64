@@ -1081,6 +1081,11 @@ void CodeGenerator::vnor_v(const VReg &vd, const VReg &vj, const VReg &vk) { Las
 void CodeGenerator::vandn_v(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100010010100, 0b00, vk, vj, vd); }
 void CodeGenerator::vorn_v(const VReg &vd, const VReg &vj, const VReg &vk) { LasxFormat3R(0b011100010010100, 0b01, vk, vj, vd); }
 
+void CodeGenerator::vandi_b(const VReg &vd, const VReg &vj, uint32_t imm8) { LasxFormatI8(0b01110011110100, imm8, vj, vd); }
+void CodeGenerator::vori_b(const VReg &vd, const VReg &vj, uint32_t imm8) { LasxFormatI8(0b01110011110101, imm8, vj, vd); }
+void CodeGenerator::vxori_b(const VReg &vd, const VReg &vj, uint32_t imm8) { LasxFormatI8(0b01110011110110, imm8, vj, vd); }
+void CodeGenerator::vnori_b(const VReg &vd, const VReg &vj, uint32_t imm8) { LasxFormatI8(0b01110011110111, imm8, vj, vd); }
+
 void CodeGenerator::vffint_s_w(const VReg &vd, const VReg &vj) { LasxFormat2R(0b01110010100111100000, 0b00, vj, vd); }
 void CodeGenerator::vffint_s_wu(const VReg &vd, const VReg &vj) { LasxFormat2R(0b01110010100111100000, 0b01, vj, vd); }
 void CodeGenerator::vffint_d_l(const VReg &vd, const VReg &vj) { LasxFormat2R(0b01110010100111100000, 0b10, vj, vd); }

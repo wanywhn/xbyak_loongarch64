@@ -90,6 +90,12 @@ void vxor_v(const VReg &vd, const VReg &vj, const VReg &vk);
 void vnor_v(const VReg &vd, const VReg &vj, const VReg &vk);
 void vandn_v(const VReg &vd, const VReg &vj, const VReg &vk);
 void vorn_v(const VReg &vd, const VReg &vj, const VReg &vk);
+
+void vandi_b(const VReg &vd, const VReg &vj, uint32_t imm8);
+void vori_b(const VReg &vd, const VReg &vj, uint32_t imm8);
+void vxori_b(const VReg &vd, const VReg &vj, uint32_t imm8);
+void vnori_b(const VReg &vd, const VReg &vj, uint32_t imm8);
+
 void vffint_s_w(const VReg &vd, const VReg &vj);
 void vffint_s_wu(const VReg &vd, const VReg &vj);
 void vffint_d_l(const VReg &vd, const VReg &vj);
