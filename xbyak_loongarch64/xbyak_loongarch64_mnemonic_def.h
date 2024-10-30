@@ -140,6 +140,15 @@ void vsrai_h(const VReg &vd, const VReg &vj, uint32_t ui4);
 void vsrai_w(const VReg &vd, const VReg &vj, uint32_t ui5);
 void vsrai_d(const VReg &vd, const VReg &vj, uint32_t ui6);
 
+void vsra_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsra_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsra_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsra_d(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsrl_b(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsrl_h(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsrl_w(const VReg &vd, const VReg &vj, const VReg &vk);
+void vsrl_d(const VReg &vd, const VReg &vj, const VReg &vk);
+
 void vbsll_v(const VReg &vd, const VReg &vj, uint32_t ui5);
 void vbsrl_v(const VReg &vd, const VReg &vj, uint32_t ui5);
 
